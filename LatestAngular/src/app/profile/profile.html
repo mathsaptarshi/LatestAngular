@@ -1,0 +1,176 @@
+<section id="app" class="container-fluid">
+      <header class="header position-relative">
+        <div class="headLine position-absolute"></div>
+        <div class="row">
+          <div class="col">
+            <h1 class="firstName text-break">
+              {{ resume.firstName }}
+            </h1>
+            <h2 class="lastName text-break">
+              {{ resume.lastName }}
+            </h2>
+            <p class="jobTitle">
+              <i class="bi bi-circle-fill"></i>
+              <span class="text-break">
+                {{ resume.jobTitle }}
+              </span>
+            </p>
+          </div>
+          <div class="col-auto d-none d-lg-block d-print-block">
+            <img v-bind:src.prop="photo" class="photo border border-2 border-dark rounded-circle img-fluid float-end">
+          </div>
+        </div>
+        <div class="middleLine position-absolute"></div>
+      </header>
+      <section class="content">
+        <div class="row">
+          <div class="col personal-details me-4">
+            <div class="row list-item me-5">
+              <div class="col-auto">
+                <div class="icon d-flex justify-content-center">
+                  <i class="bi bi-geo-alt-fill" role="img" aria-label="Location"></i>
+                </div>
+              </div>
+              <div class="col" style="white-space: pre-line;">
+                <!-- <p>{{ resume.address }}</p> -->
+              </div>
+            </div>
+            <div class="row list-item me-5">
+              <div class="col-auto align-self-center">
+                <div class="icon d-flex justify-content-center">
+                  <i class="bi bi-telephone-fill" role="img" aria-label="Telephone"></i>
+                </div>
+              </div>
+              <div class="col">
+                <a v-bind:href="'tel:'+ phone" class="text-decoration-none white-space-pre">
+                  <!-- <p>{{ phone }}</p> -->
+                </a>
+              </div>
+            </div>
+            <div class="row list-item me-5">
+              <div class="col-auto align-self-center">
+                <div class="icon d-flex justify-content-center">
+                  <i class="bi bi-envelope-fill" role="img" aria-label="Email"></i>
+                </div>
+              </div>
+              <div class="col">
+                <a v-bind:href="'mailto:'+ email" class="text-decoration-none">
+                  <p>{{ 'mathsaptarshi@gmail.com' }}</p>
+                </a>
+              </div>
+            </div>
+            <div class="row mt-5 me-5">
+              <div class="col p-0">
+                <p class="title">Education</p>
+              </div>
+            </div>
+            <div class="row record" v-for="e in education">
+              <div class="col-auto bullet">
+                <i class="bi bi-record-circle"></i>
+              </div>
+              <!-- <div class="col">
+                <p class="fw-bold text-uppercase">
+                  {{ e.degree }}
+                </p>
+                <p class="fw-bold text-uppercase">
+                  {{ e.school }}, {{ e.graduationDate }}
+                </p>
+                <p>{{ e.description }}</p>
+              </div> -->
+            </div>
+            <div class="row mt-5 me-5">
+              <div class="col p-0">
+                <p class="title">Links</p>
+              </div>
+            </div>
+            <div class="row record me-5" v-for="l in links">
+              <div class="col-auto bullet mb-5">
+                <i class="bi bi-record-circle"></i>
+              </div>
+              <div class="col">
+                <!-- <p>
+                  {{ l.label }}:
+                  <a class="text-reset" v-bind:href.prop="l.link">
+                    {{ l.link }}
+                  </a>
+                </p> -->
+              </div>
+            </div>
+            <div class="row mt-5 me-5">
+              <div class="col p-0">
+                <p class="title">Skills</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <ul>
+                  <li class="pb-2" v-for="skill in skills">{{ 'skill' }}</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row mt-5 me-5">
+              <div class="col p-0">
+                <p class="title">Languages</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <ul>
+                  <li class="pb-2" v-for="language in languages">{{ 'language' }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-8">
+            <div class="row bullet">
+              <div class="col-auto pt-2">
+                <i class="bi bi-circle-fill"></i>
+              </div>
+              <div class="col">
+                <p class="title">About Me</p>
+              </div>
+            </div>
+            <div class="row record bullet">
+              <div class="col-auto">
+                <i class="bi bi-record-circle"></i>
+              </div>
+              <div class="col">
+                <p style="white-space: pre-line;">{{ 'professionalSummary' }}</p>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-auto bullet pt-2">
+                <i class="bi bi-circle-fill"></i>
+              </div>
+              <div class="col">
+                <p class="title">Work Experience</p>
+              </div>
+            </div>
+            <div class="row record mb-4 bullet" v-for="employment in employmentHistory">
+              <div class="col-auto">
+                <i class="bi bi-record-circle"></i>
+              </div>
+              <div class="col">
+                <p class="text-uppercase fw-bold position-relative">
+                  {{ 'employment.jobTitle' }}
+                  <span>&nbsp;|&nbsp;{{ 'employment.startDate' }} - {{ 'employment.endDate' }}</span>
+                </p>
+                <p class="text-lowercase fst-italic fw-bold">
+                  {{ 'employment.employer' }}, {{ 'employment.city' }}
+                </p>
+                <p class="mb-0" v-for="achievement in employment.achievements">
+                  • {{ 'achievement' }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <div class="btn-group-fab d-print-none">
+      <div>
+        <button onclick="javascript:window.print()" type="button" class="btn btn-main btn-primary" title="Print">
+          <i class="bi bi-printer fs-3"></i>
+        </button>
+      </div>
+    </div>
