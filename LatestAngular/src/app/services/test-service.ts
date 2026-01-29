@@ -6,7 +6,9 @@ import { inject, Injectable, signal, Signal } from '@angular/core';
 })
 export class TestService {
   private _http = inject(HttpClient)
+  
   getUserList(){
-    return this._http.get('json/userList.json')
+    // return this._http.get('json/userList.json')
+    return this._http.get('http://localhost:3000/users')
   }
 }
