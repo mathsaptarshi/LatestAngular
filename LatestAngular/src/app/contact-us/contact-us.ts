@@ -1,6 +1,7 @@
 import { JsonPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { ApiServices } from '../services/api-services';
 
 @Component({
   selector: 'app-contact-us',
@@ -9,8 +10,9 @@ import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angula
   styleUrl: './contact-us.css',
 })
 export class ContactUs {
-  private fb = inject(FormBuilder)
-  public contactForm:FormGroup
+  private fb = inject(FormBuilder);
+  public contactForm:FormGroup;
+  private _apiServices = inject(ApiServices);
 
   constructor(){
     this.contactForm = this.fb.group({
@@ -23,7 +25,12 @@ export class ContactUs {
   }
 
   submitForm(){
-    console.log(this.contactForm.value)
+    console.log(this.contactForm.value);
+    this._apiServices.submitContactUs(this.contactForm.value).subscribe((data)=>{
+      console.log("data saved")
+    },(err)=>{
+      console.log("Error:",err)
+    })
   }
   
 }
