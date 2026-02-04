@@ -1,0 +1,132 @@
+<<<<<<< HEAD:LatestAngularApp/src/app/header/header.html
+<nav class="bg-white shadow">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 justify-between">
+      <div class="flex">
+        <div class="flex shrink-0 items-center">
+          <!-- Logo -->
+          <span class="text-xl font-bold text-blue-600">MyApp</span>
+        </div>
+        <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+          <!-- Navigation Links -->
+          <a [routerLink]="'/home'" 
+             routerLinkActive="border-blue-500 text-gray-900" 
+             class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+            Home
+          </a>
+          <a [routerLink]="'/profile'" 
+             routerLinkActive="border-blue-500 text-gray-900" 
+             class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+            Profile
+          </a>
+          <a [routerLink]="'/subscribers'" 
+             routerLinkActive="border-blue-500 text-gray-900" 
+             class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+            Subscribers
+          </a>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <!-- Search Input -->
+        <div class="relative">
+          <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+            <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <input type="text" 
+                 name="search" 
+                 id="search" 
+                 class="block w-full rounded-md border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" 
+                 placeholder="Search">
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+=======
+<nav
+  class="navbar navbar-expand-lg navbar-dark"
+  style="background-color: #516beb"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">Coding Yaar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="'/home'"
+            routerLinkActive="active-link"
+            aria-current="page"
+            href="#"
+            >Dashboard</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="'/profile'"
+            routerLinkActive="active-link"
+            aria-current="page"
+            href="#"
+            >Profile</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="'/contact-us'"
+            routerLinkActive="active-link"
+            >Contact Us</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="'/test'"
+            routerLinkActive=""
+            href="#"
+            >Test</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="'/users'"
+            routerLinkActive=""
+            href="#"
+            >Users</a
+          >
+        </li>
+        <!-- <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li> -->
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+      <div class="ms-3">
+        <img src="https://ui-avatars.com/api/?name=User" alt="Profile" class="rounded-circle" width="40" height="40" style="cursor: pointer;">
+      </div>
+    </div>
+  </div>
+</nav>
+>>>>>>> 5bd34f6fd5296530f7ab97ae57f28e968a3cd719:LatestAngular/src/app/header/header.html
