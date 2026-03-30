@@ -95,6 +95,7 @@
     }
   },
   "cli": {
+    "analytics": "7626b3e6-fb11-4311-b3b4-6865c68bcd62"
 <<<<<<< HEAD:LatestAngularApp/angular.json
     "analytics": "fccba3d8-5f29-463d-afff-b14d896cb2d4"
 =======

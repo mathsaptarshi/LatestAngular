@@ -26,11 +26,7 @@
     "@angular/forms": "^20.1.0",
     "@angular/platform-browser": "^20.1.0",
     "@angular/router": "^20.1.0",
-<<<<<<< HEAD:LatestAngularApp/package.json
-    "@tailwindcss/vite": "^4.1.18",
-=======
     "bootstrap": "^5.3.8",
->>>>>>> 5bd34f6fd5296530f7ab97ae57f28e968a3cd719:LatestAngular/package.json
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

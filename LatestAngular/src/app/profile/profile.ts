@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
 })
 export class Profile {
 
-<<<<<<< HEAD:LatestAngularApp/src/app/profile/profile.ts
-=======
 
   resume = {
   firstName: 'Valentina',
@@ -109,5 +107,4 @@ static pages generation.`
     }
   ]
 }
->>>>>>> 5bd34f6fd5296530f7ab97ae57f28e968a3cd719:LatestAngular/src/app/profile/profile.ts
 }
