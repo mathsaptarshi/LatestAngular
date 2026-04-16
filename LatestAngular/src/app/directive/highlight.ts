@@ -11,6 +11,10 @@ export class Highlight {
 
   }
 
+  private highlight(color: string) {
+    this.renderer.setStyle(this.el.nativeElement, 'background-color', color);
+  }
+  
   @HostListener('mouseenter') onMouseEnter() {
         this.highlight(this.appHighlight || 'orange');
 
@@ -18,8 +22,5 @@ export class Highlight {
 
   @HostListener('mouseleave') onMouseLeave() {
     this.highlight("");
-  }
-  private highlight(color: string) {
-    this.renderer.setStyle(this.el.nativeElement, 'background-color', color);
   }
 }

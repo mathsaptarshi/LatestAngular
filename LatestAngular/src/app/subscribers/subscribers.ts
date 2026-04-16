@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, signal, ViewContainerRef } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SubscriberService } from '../services/subscriber';
 import { ViewUser } from './view-user';
 import { Subject, of } from 'rxjs';
@@ -7,7 +8,7 @@ import { concatMap, delay, exhaustMap, mergeMap, switchMap, tap, debounceTime, d
 
 @Component({
   selector: 'app-subscribers',
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   providers: [SubscriberService],
   templateUrl: './subscribers.html',
   styleUrl: './subscribers.css'
@@ -16,6 +17,13 @@ export class Subscribers {
 
   private _subscriberService = inject(SubscriberService);
   private _viewContainerRef = inject(ViewContainerRef);
+  private fb = inject(FormBuilder);
+
+  addSubscriberForm = signal<FormGroup>(this.fb.group({
+    firstname: ['', Validators.required],
+    lastname: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]]
+  }));
   
   subscribers = signal<any[]>([]);
   searchQuery = signal('');

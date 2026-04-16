@@ -1,0 +1,48 @@
+.hero-section {
+  min-height: 100vh;
+  background-color: #121212; /* Deep dark background */
+}
+
+.text-neon {
+  color: #00ff66; /* Neon green accent from your image */
+}
+
+.btn-neon {
+  background-color: #00ff66;
+  color: #000;
+  border: none;
+  border-radius: 0; /* Boxy button style */
+}
+
+.btn-neon:hover {
+  background-color: #00cc52;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.9rem;
+}
+
+.hero-title {
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+.accent-triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid #fff;
+  transform: rotate(90deg) translateY(-10px);
+}
+
+.max-w-500 {
+  max-width: 500px;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}

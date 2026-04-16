@@ -1,2 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+/* Shared Theme Colors */
+.text-neon { color: #00ff66 !important; }
+.bg-dark-custom { background-color: #121212; }
+
+/* Header Enhancements */
+.navbar {
+  transition: all 0.3s ease;
+  background-color: rgba(18, 18, 18, 0.9) !important; /* Semi-transparent */
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline-neon {
+  border: 2px solid #00ff66;
+  color: #00ff66;
+  border-radius: 0;
+  transition: 0.3s;
+}
+
+.btn-outline-neon:hover {
+  background-color: #00ff66;
+  color: #000;
+}
+
+/* Footer & Link Hover Effects */
+.link-neon:hover {
+  color: #00ff66 !important;
+  padding-left: 5px;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #00ff66;
+  border-color: #00ff66 !important;
+  color: #000 !important;
+  transition: 0.3s;
+}
+
+.letter-spacing-1 { letter-spacing: 1.5px; }
