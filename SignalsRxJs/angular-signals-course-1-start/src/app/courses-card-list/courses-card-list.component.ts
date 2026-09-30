@@ -12,5 +12,15 @@ import {MatDialog} from "@angular/material/dialog";
     styleUrl: './courses-card-list.component.scss'
 })
 export class CoursesCardListComponent {
+    courses = input.required<Course[]>();
+    courseUpdated = output<Course>();
 
+    courseDeleted = output<string>();
+
+    onEditCourse(course: Course){
+
+    }
+    onCourseDeleted(course: Course){
+
+    }
 }
